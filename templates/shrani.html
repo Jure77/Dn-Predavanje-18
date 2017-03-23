@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Filton| Register</title>
+
+    <link rel="stylesheet" href="/assets/css/shrani.css">
+</head>
+<body>
+    <h1>Status:</h1>
+
+    <p>Uspesno ste shranili vaše sporočilo, lep dan še naprej.</p>
+
+    {% for sp in sporocila %}
+
+    <p>{{ sp.nastanek.strftime("%d.%m.%Y %H:%M") }} {{ sp.ime }} {{ sp.priimek }} {{ sp.sporocilo }}</p>
+    {% else %}
+    <p>Ni sporočil</p>
+    {% endfor %}
+
+
+</body>
+</html>
+
+
+
+
+
+
